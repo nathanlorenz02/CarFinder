@@ -13,9 +13,24 @@
 		4378924C1FFC2FAE00E1DFAB /* CarFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4378924A1FFC2FAE00E1DFAB /* CarFinder.xcdatamodeld */; };
 		4378924E1FFC2FAE00E1DFAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4378924D1FFC2FAE00E1DFAB /* Assets.xcassets */; };
 		437892511FFC2FAE00E1DFAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4378924F1FFC2FAE00E1DFAB /* LaunchScreen.storyboard */; };
+		4378925A1FFC3BBE00E1DFAB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437892591FFC3BBE00E1DFAB /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		435640DF1FFE9E0300207AE7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		435640D01FFE9E0300207AE7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		437892401FFC2FAE00E1DFAB /* CarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437892431FFC2FAE00E1DFAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		437892451FFC2FAE00E1DFAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +39,7 @@
 		4378924D1FFC2FAE00E1DFAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		437892501FFC2FAE00E1DFAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		437892521FFC2FAE00E1DFAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		437892591FFC3BBE00E1DFAB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,10 +53,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		435640CF1FFE9E0300207AE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				435640D01FFE9E0300207AE7 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		437892371FFC2FAE00E1DFAB = {
 			isa = PBXGroup;
 			children = (
 				437892421FFC2FAE00E1DFAB /* CarFinder */,
+				435640CF1FFE9E0300207AE7 /* Frameworks */,
 				437892411FFC2FAE00E1DFAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +83,7 @@
 			children = (
 				437892431FFC2FAE00E1DFAB /* AppDelegate.swift */,
 				437892451FFC2FAE00E1DFAB /* ViewController.swift */,
+				437892591FFC3BBE00E1DFAB /* MenuViewController.swift */,
 				437892471FFC2FAE00E1DFAB /* Main.storyboard */,
 				4378924D1FFC2FAE00E1DFAB /* Assets.xcassets */,
 				4378924F1FFC2FAE00E1DFAB /* LaunchScreen.storyboard */,
@@ -77,6 +103,7 @@
 				4378923C1FFC2FAE00E1DFAB /* Sources */,
 				4378923D1FFC2FAE00E1DFAB /* Frameworks */,
 				4378923E1FFC2FAE00E1DFAB /* Resources */,
+				435640DF1FFE9E0300207AE7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -94,12 +121,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Nathan Lorenz";
 				TargetAttributes = {
 					4378923F1FFC2FAE00E1DFAB = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -142,6 +174,7 @@
 				437892461FFC2FAE00E1DFAB /* ViewController.swift in Sources */,
 				4378924C1FFC2FAE00E1DFAB /* CarFinder.xcdatamodeld in Sources */,
 				437892441FFC2FAE00E1DFAB /* AppDelegate.swift in Sources */,
+				4378925A1FFC3BBE00E1DFAB /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +214,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -188,6 +222,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -215,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -238,6 +273,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -245,6 +281,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -266,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -281,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68AW59MP7J;
 				INFOPLIST_FILE = CarFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanlorenz.CarFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68AW59MP7J;
 				INFOPLIST_FILE = CarFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathanlorenz.CarFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";

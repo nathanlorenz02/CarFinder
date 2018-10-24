@@ -1,24 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZE2-Rh-1L1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="98O-wB-Ov0">
+            <objects>
+                <viewController storyboardIdentifier="menuView" id="ZE2-Rh-1L1" customClass="MenuViewController" customModule="CarFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TOd-pU-Ezf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSQ-0X-cJJ">
+                                <rect key="frame" x="16" y="158" width="343" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="6yQ-sd-F6n"/>
+                                </constraints>
+                                <state key="normal" title="Park My Car">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="parkMyCar:" destination="ZE2-Rh-1L1" eventType="touchUpInside" id="lqs-Cv-54D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyz-O0-Pa0">
+                                <rect key="frame" x="16" y="494" width="343" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.58643005015774774" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="3zD-LX-ThG"/>
+                                </constraints>
+                                <state key="normal" title="Find My Parked Car">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findMyParkedCar:" destination="ZE2-Rh-1L1" eventType="touchUpInside" id="Qcf-Y3-Jzr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets your car's location so that it can be found later." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnd-V4-oBr">
+                                <rect key="frame" x="16" y="213" width="315" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shows the location of your parked car." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66P-ii-tt2">
+                                <rect key="frame" x="16" y="549" width="343" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CarFinder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdK-2W-a4O">
+                                <rect key="frame" x="124" y="20" width="128" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGH-rj-Hpy">
+                                <rect key="frame" x="16" y="323" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu6-mb-VYC">
+                                <rect key="frame" x="16" y="237" width="343" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="gez-9K-12I"/>
+                                </constraints>
+                                <state key="normal" title="Remove Car Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeCarLocation:" destination="ZE2-Rh-1L1" eventType="touchUpInside" id="4sc-z2-0Tx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Parked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bb-9W-Sio">
+                                <rect key="frame" x="123" y="323" width="236" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rnd-V4-oBr" secondAttribute="trailing" constant="20" symbolic="YES" id="02L-pg-xpp"/>
+                            <constraint firstItem="66P-ii-tt2" firstAttribute="top" secondItem="Lyz-O0-Pa0" secondAttribute="bottom" constant="8" symbolic="YES" id="5p2-PQ-ihr"/>
+                            <constraint firstItem="4bb-9W-Sio" firstAttribute="trailing" secondItem="66P-ii-tt2" secondAttribute="trailing" id="Acs-Dg-G6Q"/>
+                            <constraint firstItem="Lyz-O0-Pa0" firstAttribute="leading" secondItem="66P-ii-tt2" secondAttribute="leading" id="BrE-xv-xW0"/>
+                            <constraint firstItem="4bb-9W-Sio" firstAttribute="baseline" secondItem="JGH-rj-Hpy" secondAttribute="baseline" id="EYO-fk-kIs"/>
+                            <constraint firstItem="qXl-AL-7b7" firstAttribute="trailing" secondItem="uSQ-0X-cJJ" secondAttribute="trailing" constant="16" id="GDI-UP-bry"/>
+                            <constraint firstItem="66P-ii-tt2" firstAttribute="leading" secondItem="qXl-AL-7b7" secondAttribute="leading" constant="16" id="Jz4-Wv-Tde"/>
+                            <constraint firstAttribute="bottom" secondItem="Lyz-O0-Pa0" secondAttribute="bottom" constant="126" id="Ke7-wq-ZcA"/>
+                            <constraint firstItem="Gu6-mb-VYC" firstAttribute="leading" secondItem="qXl-AL-7b7" secondAttribute="leading" constant="16" id="LHY-7O-3dJ"/>
+                            <constraint firstItem="4bb-9W-Sio" firstAttribute="leading" secondItem="JGH-rj-Hpy" secondAttribute="trailing" constant="22" id="LmT-0A-ghj"/>
+                            <constraint firstItem="uSQ-0X-cJJ" firstAttribute="leading" secondItem="qXl-AL-7b7" secondAttribute="leading" constant="16" id="Ogh-4b-L8t"/>
+                            <constraint firstItem="uSQ-0X-cJJ" firstAttribute="top" secondItem="YdK-2W-a4O" secondAttribute="bottom" constant="102" id="Rjq-8G-CRo"/>
+                            <constraint firstItem="Rnd-V4-oBr" firstAttribute="leading" secondItem="qXl-AL-7b7" secondAttribute="leading" constant="16" id="UfE-fd-KMK"/>
+                            <constraint firstItem="4bb-9W-Sio" firstAttribute="trailing" secondItem="Gu6-mb-VYC" secondAttribute="trailing" id="V1P-hr-uhe"/>
+                            <constraint firstItem="Lyz-O0-Pa0" firstAttribute="trailing" secondItem="66P-ii-tt2" secondAttribute="trailing" id="WHJ-pj-6I4"/>
+                            <constraint firstItem="JGH-rj-Hpy" firstAttribute="top" secondItem="Gu6-mb-VYC" secondAttribute="bottom" constant="39" id="cJM-DY-JvA"/>
+                            <constraint firstItem="Rnd-V4-oBr" firstAttribute="top" secondItem="uSQ-0X-cJJ" secondAttribute="bottom" constant="8" id="kd8-Tz-HMi"/>
+                            <constraint firstItem="Gu6-mb-VYC" firstAttribute="top" secondItem="Rnd-V4-oBr" secondAttribute="bottom" constant="8" id="scc-Jk-00a"/>
+                            <constraint firstItem="JGH-rj-Hpy" firstAttribute="leading" secondItem="qXl-AL-7b7" secondAttribute="leading" constant="16" id="sxp-XL-VMx"/>
+                            <constraint firstItem="qXl-AL-7b7" firstAttribute="trailing" secondItem="Gu6-mb-VYC" secondAttribute="trailing" constant="16" id="tn4-Pb-n5D"/>
+                            <constraint firstItem="YdK-2W-a4O" firstAttribute="top" secondItem="qXl-AL-7b7" secondAttribute="top" id="yLO-6p-IwL"/>
+                            <constraint firstItem="YdK-2W-a4O" firstAttribute="centerX" secondItem="qXl-AL-7b7" secondAttribute="centerX" id="zkj-ik-cuj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qXl-AL-7b7"/>
+                    </view>
+                    <connections>
+                        <outlet property="activitiyIndicator" destination="9jw-4O-Mad" id="pbR-i7-fIQ"/>
+                        <outlet property="findCarOutlet" destination="Lyz-O0-Pa0" id="SNN-EC-DbP"/>
+                        <outlet property="parkCarOutlet" destination="uSQ-0X-cJJ" id="kTX-Rj-baN"/>
+                        <outlet property="popUpView" destination="c2T-tt-8g4" id="5MN-hu-T1L"/>
+                        <outlet property="removeCarLocationOutlet" destination="Gu6-mb-VYC" id="Aml-UV-CLd"/>
+                        <outlet property="statusLabel" destination="4bb-9W-Sio" id="pst-zL-ZTz"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="openMap" id="AS7-SW-Whd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNG-zE-eGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="c2T-tt-8g4">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9jw-4O-Mad">
+                            <rect key="frame" x="110" y="49" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adding Car's Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGO-BN-BIY">
+                            <rect key="frame" x="16" y="20" width="208" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <viewLayoutGuide key="safeArea" id="yda-06-iec"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-644" y="133.5832083958021"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapsView" id="BYZ-38-t0r" customClass="ViewController" customModule="CarFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gu4-0V-feO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="S0T-in-bxo"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6O-Hk-unO">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZE2-Rh-1L1" kind="show" id="WG2-SK-lD2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gu4-0V-feO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Pv-OS-QfF"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V6O-Hk-unO" secondAttribute="trailing" constant="20" symbolic="YES" id="Fd9-QX-tdg"/>
+                            <constraint firstItem="Gu4-0V-feO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RPd-Ap-t4D"/>
+                            <constraint firstItem="V6O-Hk-unO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Uz8-Zi-lUH"/>
+                            <constraint firstItem="Gu4-0V-feO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wdi-AD-rj8"/>
+                            <constraint firstItem="Gu4-0V-feO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cuZ-Um-YG0"/>
+                            <constraint firstItem="V6O-Hk-unO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ten-wu-T5B"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Gu4-0V-feO" id="bpb-EG-KoL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
