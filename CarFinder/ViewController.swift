@@ -53,11 +53,7 @@ class ViewController: UIViewController {
                     
                 }
                 
-                
-               
-                
-               
-                
+            
             }
         }
         catch
@@ -79,11 +75,11 @@ class ViewController: UIViewController {
         
         let lonDelta:CLLocationDegrees = 0.005
         
-        let span = MKCoordinateSpanMake(latDelta, lonDelta)
+        let span = MKCoordinateSpan.init(latitudeDelta: latDelta, longitudeDelta: lonDelta)
         
         let location = CLLocationCoordinate2DMake(latitude, longitude)
         
-        let region = MKCoordinateRegionMake(location, span)
+        let region = MKCoordinateRegion.init(center: location, span: span)
         
         mapView.setRegion(region, animated: false)
         
@@ -92,9 +88,6 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -109,6 +102,7 @@ extension ViewController : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error.localizedDescription)")
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -120,7 +114,7 @@ extension ViewController : CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if let location = locations.first {
-            let span = MKCoordinateSpanMake(0.01, 0.01)
+            let span = MKCoordinateSpan.init(latitudeDelta: 0.01, longitudeDelta: 0.01)
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             mapView.setRegion(region, animated: true)
         }
